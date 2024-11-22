@@ -29,12 +29,12 @@ while True:
 
     # Draw rectangle around the faces
     for (x, y, w, h) in faces:
-      cv.rectangle(gray, (x, y), (x+w, y+h), (0, 255, 255), 5)
-      cv.rectangle(gray, (x-5, y-5), (x+w+5, y+h+5), (0, 0, 0), 5)
+      cv.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 255), 5)
+      cv.rectangle(frame, (x-5, y-5), (x+w+5, y+h+5), (0, 0, 0), 5)
 
 
     # Display the resulting frame
-    cv.imshow('frame', gray)
+    cv.imshow('frame', frame)
     if cv.waitKey(1) == ord('q'):
         break
  
